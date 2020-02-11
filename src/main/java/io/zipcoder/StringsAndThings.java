@@ -17,8 +17,8 @@ public class StringsAndThings {
     public Integer countYZ(String input){/* 122 121 */
         String result = "";
         Integer num = 0;
-        for (int i = 0; i < input.length(); i++){
-            char letter = input.charAt(i);
+        for (String count: input.split(" ")){
+            char letter = count.charAt(count.length()-1);
             if ( letter == 'y' || letter == 'z'){
 
                 num++;
