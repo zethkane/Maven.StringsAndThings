@@ -20,10 +20,9 @@ public class StringsAndThings {
         for (int i = 0; i < input.length(); i++){
             char letter = input.charAt(i);
             if ( letter == 'y' || letter == 'z'){
-                if (i+1 != input.length() || i+1 != ' '){
 
                 num++;
-            }}
+            }
         }return num;
 }
     /**
@@ -50,7 +49,23 @@ public class StringsAndThings {
      *           containsEqualNumberOfIsAndNot("noisxxnotyynotxisi") // Should return true
      */
     public Boolean containsEqualNumberOfIsAndNot(String input){
-        return null;
+        int count = 0;
+        int count1 = 0;
+        char c = 'i';
+        char d = 's';
+        char e = 'n';
+        char f = 'o';
+        char g = 't';
+
+        for(int i = 0; i < input.length() - 1; i++){
+            if(input.charAt(i) == c && input.charAt(i+1) != input.length() && input.charAt(i+1) == d) {
+                count++;
+            }
+            if(input.charAt(i) == e && input.charAt(i+1) == f && input.charAt(i+2) == g){
+                count1++;
+            }
+        }
+        return (count == count1);
     }
 
     /**
@@ -61,7 +76,17 @@ public class StringsAndThings {
      *           gHappy("xxggyygxx") // Should return  false
      */
     public Boolean gIsHappy(String input){
-        return null;
+        boolean happy = false;
+        char c = 'g';
+        char d = 'x';
+        for (int i = 0; i < input.length(); i++){
+            if (input.charAt(i) == c && input.charAt(i+1) == c || input.charAt(i) == c && input.charAt(i - 1) == c){
+                happy = true;
+            }
+            else { if ( input.charAt(i) == c){
+                happy = false;}}
+        }
+        return happy;
     }
 
 
